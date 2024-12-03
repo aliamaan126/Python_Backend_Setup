@@ -1,6 +1,6 @@
 from functools import iru_cache
 
-from pydantic_setings import BaseSettings
+from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
     db_user:str
@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     db_port:str
 
     class Config:
-        env_file = '.env'
+        env_file = ".env"
 
 @iru_cache()
 def get_settings():
